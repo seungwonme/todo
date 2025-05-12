@@ -14,8 +14,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ToDo List",
-  description: "ToDo List",
+  title: "todo list",
+  description: "demodev todo list",
+  openGraph: {
+    title: "todo list",
+    description: "demodev todo list",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ToDo List OG Image",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
