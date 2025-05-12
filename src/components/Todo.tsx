@@ -9,15 +9,17 @@
  */
 
 import { TodoApp } from "@/components/TodoApp";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Todo() {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
-      <header className="bg-white shadow-sm py-4 border-b">
-        <div className="container max-w-7xl mx-auto px-4">
-          <h1 className="text-xl font-semibold text-gray-800">
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <header className="bg-card shadow-sm py-4 border-b">
+        <div className="container max-w-7xl mx-auto px-4 flex justify-between items-center">
+          <h1 className="text-xl font-semibold text-card-foreground">
             Next.js + Supabase TodoList
           </h1>
+          <ThemeToggle />
         </div>
       </header>
 
@@ -25,8 +27,8 @@ export default function Todo() {
         <TodoApp />
       </main>
 
-      <footer className="bg-white border-t py-4">
-        <div className="container max-w-7xl mx-auto px-4 text-center text-sm text-gray-500">
+      <footer className="bg-card border-t py-4">
+        <div className="container max-w-7xl mx-auto px-4 text-center text-sm text-muted-foreground">
           © 2025 TodoList App. 모든 권리 보유.
         </div>
       </footer>

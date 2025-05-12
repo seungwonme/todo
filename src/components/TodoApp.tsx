@@ -100,8 +100,10 @@ export function TodoApp() {
   };
 
   return (
-    <div className="container max-w-md mx-auto py-8 px-4">
-      <h1 className="text-2xl font-bold text-center mb-8">Todo 리스트</h1>
+    <div className="container max-w-md mx-auto py-8 px-4 bg-card rounded-lg shadow-sm">
+      <h1 className="text-2xl font-bold text-center mb-8 text-card-foreground">
+        Todo 리스트
+      </h1>
       <TodoForm onAddTodo={addTodo} isLoading={isLoading} />
       <TodoList
         todos={todos}
